@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tittle</title>
+</head>
+<body>
+  <h1>.</h1>
+
+  <button onclick="downloadZip()">kk</button>
+
+  <script>
+    function downloadZip() {
+      // Create a temporary anchor element
+      var link = document.createElement('a');
+      link.href = 'prqc.zip';
+      link.download = 'prqc.zip';
+
+      // Trigger the download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
