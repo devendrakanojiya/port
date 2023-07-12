@@ -1,0 +1,53 @@
+#Write a program to design and develop python program to implement various control statement using suitable examples
+# If-else statement
+num = 10
+if num > 0:
+    print("Positive number")
+elif num < 0:
+    print("Negative number")
+else:
+    print("Zero")
+
+# For loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# While loop
+count = 1
+while count <= 5:
+    print("Count:", count)
+    count += 1
+
+# Break statement
+for num in range(1, 10):
+    if num == 5:
+        break
+    print(num)
+
+# Continue statement
+for num in range(1, 6):
+    if num == 3:
+        continue
+    print(num)
+
+# Nested loop
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+
+# Example of pass statement
+num = 10
+if num > 0:
+    pass  # To be implemented later
+
+# Example of assert statement
+x = 5
+assert x > 0, "Invalid value"
+
+# Example of try-except statement
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+

@@ -1,0 +1,38 @@
+#Write Python program to demonstrate different types of function arguments.
+
+# Positional Arguments
+def greet(name, message):
+    print("Hello,", name + "!", message)
+
+greet("Alice", "How are you?")  # Positional arguments
+
+# Default Arguments
+def calculate_area(length, width=1):
+    area = length * width
+    print("Area:", area)
+
+calculate_area(5)  # Using default width value
+calculate_area(5, 3)  # Overriding default width value
+
+# Variable Number of Arguments
+def add_numbers(*args):
+    total = sum(args)
+    print("Sum:", total)
+
+add_numbers(1, 2, 3)  # Any number of arguments
+
+# Keyword Arguments
+def person_details(name, age, city):
+    print("Name:", name)
+    print("Age:", age)
+    print("City:", city)
+
+person_details(name="Alice", age=25, city="New York")
+
+# Mixed Arguments
+def student_info(name, *scores, **info):
+    print("Name:", name)
+    print("Scores:", scores)
+    print("Info:", info)
+
+student_info("Alice", 90, 85, 95, grade="A", section="B")

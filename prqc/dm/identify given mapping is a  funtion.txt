@@ -1,0 +1,15 @@
+To determine if a given mapping is a function, we need to ensure that each input maps to a unique output. In Python, we can approach this by using a dictionary to represent the mapping. Here's an example code snippet that checks if a mapping is a function:
+
+def is_function(mapping):
+    values = list(mapping.values())
+    return len(values) == len(set(values))
+
+# Example usage
+mapping = {1: 'a', 2: 'b', 3: 'c', 4: 'a'}
+if is_function(mapping):
+    print("The mapping is a function.")
+else:
+    print("The mapping is not a function.")
+In this code, the is_function function takes a mapping as input and converts its values into a list. Then, it compares the length of the list with the length of a set created from the list. If the lengths are equal, it means that all the mapped values are unique, indicating that the mapping is a function. Otherwise, it is not a function.
+
+You can provide your own mapping to the mapping variable in the example code and run it to check if it is a function or not.

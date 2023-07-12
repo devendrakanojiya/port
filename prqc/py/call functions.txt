@@ -1,0 +1,8 @@
+#Write program in Python to define and call functions for suitable problem.
+
+def greet_person():
+    name = input("Enter your name: ")
+    print("Hello, " + name + "! How are you today?")
+
+name= "amit"
+greet_person(name)

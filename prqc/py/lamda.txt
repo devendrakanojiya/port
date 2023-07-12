@@ -1,0 +1,25 @@
+# Write Python program to implement and use lambda function in python
+
+# square of a number
+square = lambda x: x ** 2
+result = square(5)
+print("Square:", result)
+
+# check if a number is even
+is_even = lambda x: x % 2 == 0
+number = 10
+if is_even(number):
+    print(number, "is even")
+else:
+    print(number, "is odd")
+
+# perform arithmetic operations
+operate = lambda x, y: x + y, lambda x, y: x - y, lambda x, y: x * y
+a = 5
+b = 3
+addition = operate[0](a, b)
+subtraction = operate[1](a, b)
+multiplication = operate[2](a, b)
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)

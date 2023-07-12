@@ -1,0 +1,65 @@
+# Write a program to implement tuple in Python for suitable problem. Demonstrate
+various operations on it.
+
+
+# Creating tuples
+fruits = ("apple", "banana", "cherry")
+numbers = (1, 2, 3, 4, 5)
+mixed = ("apple", 1, True)
+
+# Accessing tuple elements
+print("First fruit:", fruits[0])
+print("Second number:", numbers[1])
+print("Third element in mixed tuple:", mixed[2])
+
+# Tuple concatenation
+combined = fruits + numbers
+print("Combined tuple:", combined)
+
+# Tuple slicing
+sliced = fruits[1:3]
+print("Sliced tuple:", sliced)
+
+# Length of a tuple
+print("Length of numbers tuple:", len(numbers))
+
+# Count occurrences of an element in a tuple
+count = mixed.count("apple")
+print("Count of 'apple' in mixed tuple:", count)
+
+# Check if an element exists in a tuple
+exists = "banana" in fruits
+print("Does 'banana' exist in fruits tuple?", exists)
+
+# Iterate through a tuple
+print("All elements in numbers tuple:")
+for num in numbers:
+    print(num)
+
+# Unpacking tuple elements
+name, age, city = ("John", 25, "New York")
+print("Name:", name)
+print("Age:", age)
+print("City:", city)
+
+
+# Dictionary Example
+
+# Creating a dictionary
+student = {
+    "name": "John",
+    "age": 20,
+   
+}
+
+# Accessing dictionary elements
+print("Student Name:", student["name"])
+print("Student Age:", student["age"])
+
+# List Example
+# Creating a list
+fruits = ["apple", "banana", "cherry", "orange"]
+
+# Displaying the list
+print("Fruits List:", fruits)
+

@@ -1,0 +1,19 @@
+To find the inverse of a given function, we need to swap the roles of the input and output variables. In other words, if the original function maps inputs `x` to outputs `y`, the inverse function will map inputs `y` back to the corresponding outputs `x`.
+
+In Python, we can define a function to calculate the inverse of a given function. Here's an example code snippet that demonstrates the process:
+
+def find_inverse(function):
+    inverse = {}
+    for key, value in function.items():
+        inverse[value] = key
+    return inverse
+
+# Example usage
+function = {1: 'a', 2: 'b', 3: 'c', 4: 'a'}
+inverse_function = find_inverse(function)
+print("Inverse Function:", inverse_function)
+
+
+In this code, the `find_inverse` function takes a function represented as a dictionary and creates an empty dictionary to store the inverse mapping. It iterates over the key-value pairs of the original function and swaps them in the inverse mapping.
+
+You can provide your own function as a dictionary to the `function` variable in the example code, and it will return the corresponding inverse function as a dictionary.
