@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+        <link rel="stylesheet" href="style.css">
+        <title>Let Her Go</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="hill"></div>
+        <div class="me"></div>
+        <div class="heart">
+            <i class="fa-solid fa-heart-crack"></i>
+        </div>
+        <div class="msg-div">
+            <div class="msg">
+                <p class="text">I gave my all, hoping to win your love. But even though you don't feel the same, I'll cherish the moments we shared. Deep in my heart, I'll always hold a glimmer of hope, silently waiting for the day you realize the love that's been here all along.</p>
+                <div class="btn">
+                    <i class="fa-solid fa-heart-crack"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        let btn = document.querySelector(".btn");
+        let heart = document.querySelector(".heart");
+        let msgDiv = document.querySelector(".msg-div");
+        
+        let song = new Audio("https://lethergo.glitch.me/lethergo1.mp3");
+        
+        btn.addEventListener("click", event =>{
+          song.play();
+          msgDiv.style.display = "none";
+          heart.style.animation = "up 5s linear";
+        })
+        function creatMeteoroid() {
+          var meteor = document.createElement("div");
+          meteor.className = "metor";
+        
+          var x = Math.random() * (3000 - 20);
+          var size = Math.random() * 30 + 10;
+          var speed = Math.random() * 3 + 1;
+          meteor.style.left = x + "px";
+          meteor.style.animationDuration = speed + "s";
+          document.body.appendChild(meteor);
+        
+          setTimeout(function() {
+            meteor.parentNode.removeChild(meteor);
+          }, speed * 5000);
+        }
+        setInterval(creatMeteoroid, 500);
+        
+        function generateStars(numStars) {
+        var stars = [];
+        for (var i = 0; i < numStars; i++) {
+          var star = document.createElement("div");
+          star.className = "star";
+          star.style.left = Math.random() * 100 + "%";
+          star.style.top = Math.random() * 100 + "%";
+          star.style.animationDelay = Math.random() + "s";
+          stars.push(star);
+        }
+        return stars;
+        }
+        
+        function appendStars(stars) {
+        var sky = document.querySelector("body");
+        for (var i = 0; i < stars.length; i++) {
+          sky.appendChild(stars[i]);
+        }
+        }
+        
+        var numStars = 200;
+        var stars = generateStars(numStars);
+        appendStars(stars);
+        
+    </script>
+</html>

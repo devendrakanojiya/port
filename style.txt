@@ -1,0 +1,177 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #001448 0%, #0a666e 100%);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.heart {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 100px red, 0 0 100px white;
+  transform: translateY(-120%);
+  color: #ff7f81;
+  z-index: -3;
+  font-size: 200px;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-120%);
+  }
+}
+
+.hill {
+  height: 300px;
+  background-position: center;
+  /*  background-repeat: no-repeat;*/
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-image: url("https://lethergo.glitch.me/hill2.png");
+}
+
+.me {
+  height: 200px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-image: url("https://lethergo.glitch.me/me2.png");
+  bottom: 13%;
+  position: absolute;
+  z-index: -1;
+}
+
+.metor {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px white;
+  position: absolute;
+  animation: meteorrain 5s linear infinite;
+  top: 0;
+  z-index: -3;
+}
+
+.metor::before {
+  content: "";
+  transform: rotate(45deg);
+  height: 1px;
+  width: 50px;
+  display: flex;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  box-shadow: 0 0 10px white, 0 0 5px white;
+}
+
+.msg-div {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(100px);
+  z-index: 1000;
+}
+
+.msg {
+  height: 250px;
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+  top: 200px;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*  border-radius: 15px;*/
+  background: #DE3163;
+  color: white;
+  text-shadow: 1px 1px 1px pink;
+  border: 1px solid white;
+}
+
+.btn {
+  color: white;
+  padding: 10px;
+  width: 80px;
+  background: red;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  border: 1px solid white;
+  cursor: pointer;
+  background: #ed2d3c;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: -4;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    background: blueviolet;
+  }
+}
+
+@keyframes meteorrain {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .me {
+    height: 200px;
+    width: 250px;
+    background-size: 60%;
+    left: 150px;
+    bottom: 10%;
+  }
+
+  .metor::before {
+    height: 0.1px;
+    width: 30px;
+  }
+
+  .heart {
+    font-size: 100px;
+    text-shadow: 0 0 100px hotpink, 0 0 100px pink;
+  }
+}
